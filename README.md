@@ -60,8 +60,7 @@ In order to view source code, compile program with `-g` flag.
 
 ## Breakpoints
 * (gdb)info breakpoints - Show all breakpoints
-* (gdb)break [location] [threadnum] [condition] - Set a breakpoint on a given location in given thread if specified condition is true. Location can be function, linenum, address. With no location, uses current execution address of the selected
-stack frame. This is useful for breaking on return to a stack frame.
+* (gdb)break [location] [threadnum] [condition] - Set a breakpoint on a given location in given thread if specified condition is true. Location can be function, linenum, address. With no location, uses current execution address of the selected stack frame. This is useful for breaking on return to a stack frame.
 * (gdb)delete breakpoint1 breakpoint2 ... - Delete given breakpoints
 * (gdb)enable|disable breakpoint1 breakpoint2 ... - Enable or disable given breakpoints
 
@@ -95,8 +94,10 @@ Size letters are b(byte), h(halfword), w(word), g(giant, 8 bytes)
 * (gdb)reverse-step - Step program backward until it reaches the beginning of another source line
 * (gdb)reverse-stepi - Step backward exactly one instruction
 
-* (gdb)finish - Execute until selected stack frame returns
+* (gdb)finish - Execute until selected stack frame returns (return value will be printed as well)
 * (gdb)reverse-finish - Execute backward until just before selected stack frame is called
+
+* (gdb)return - Make selected stack frame return to its caller (If an argument is given, it is an expression for the value to return.)
 
 * (gdb)continue - Continue until it hints the next breakpoint
 * (gdb)reverse-continue - Continue backward until it hints the previous breakpoints
