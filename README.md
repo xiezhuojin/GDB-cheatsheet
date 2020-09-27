@@ -1,3 +1,5 @@
+Before using gdb to debug your code, remenber to compile your code with `-g (with source code symbols)` flag or `-g3 (all debug info, including macro symbols and source code symbols)`
+
 # How GDB works?
 Understanding how does gdb work can makes your life way more easier. Gdb mainly uses 'ptrace' syscall (which provides a means by which one process (the "tracer") may observe and control the execution of another process (the "tracee"), and examine and change the tracee's memory and registers) to debug process. Below shows ptrace's prototype:
 ```
